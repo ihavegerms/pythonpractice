@@ -1,16 +1,15 @@
 #!/usr/bin/env python
 
-def primefactor():
+a = 600851475143 
 
-    solve = 600851475143
-    prime = False
-
-    while prime == False:
-        solve2 = solve / 2
-        if type(solve2) == 'float' or solve2 % 2 != 0:
-            print(solve2)
-            break
+def primefactor(a):
+    b = 2
+    while (a > b):
+        if (a % b == 0):
+            a = a / b;
+            b = 2;
         else:
-            continue
+            b += 1;
+    print(str(b))
 
-primefactor()
+primefactor(a)
